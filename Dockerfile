@@ -10,8 +10,6 @@ RUN apt-get install -y wget xz-utils && \
 
 ENV PATH /node-v7.6.0-linux-x64/bin:$PATH
 
-RUN npm install -g nodemon
-
 VOLUME /app
 WORKDIR /app
 RUN mkdir /.npm && chown 1000:1000 /.npm
