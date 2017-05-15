@@ -14,6 +14,6 @@ RUN npm install -g nodemon
 
 VOLUME /app
 WORKDIR /app
-RUN mkdir /.npm && chown 1000:1000 /.npm
+RUN mkdir /.npm && chown 1000:1000 /.npm && mkdir /.config && chown 1000:1000 /.config
 USER 1000
-CMD ['node']
+CMD bash
