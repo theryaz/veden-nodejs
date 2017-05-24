@@ -1,4 +1,4 @@
-FROM efrecon/armv7hf-debian:jessie
+FROM armv7/armhf-debian:jessie
 
 RUN apt-get update
 
@@ -14,4 +14,3 @@ VOLUME /app
 WORKDIR /app
 RUN mkdir /.npm && chown 1000:1000 /.npm
 USER 1000
-CMD ['node']
