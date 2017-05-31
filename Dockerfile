@@ -11,9 +11,7 @@ RUN cd /node-v8.0.0 && \
     make && \
     make install
 
-RUN rm /node-v8.0.0.tar.gz && apk del wget python build-base gcc linux-headers
-
-ENV PATH /node-v7.10.0-linux-x64/bin:$PATH
+RUN rm /node-v8.0.0.tar.gz && rm -rf /node-v8.0.0 && apk del wget python build-base gcc linux-headers
 
 VOLUME /app
 WORKDIR /app
