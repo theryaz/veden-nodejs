@@ -10,6 +10,9 @@ RUN cd /node-v8.0.0 && \
     ./configure && \
     make && \
     make install
+    
+RUN cd /node-v8.0.0 && \
+    make test
 
 RUN rm /node-v8.0.0.tar.gz && rm -rf /node-v8.0.0 && apk del wget python build-base gcc linux-headers
 
