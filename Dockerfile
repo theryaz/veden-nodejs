@@ -4,8 +4,11 @@ VOLUME /app
 WORKDIR /app
 
 RUN mkdir /angular-cli && \
-		cd /angular-cli && \
-		npm install @angular/cli@1.0.0
+		chown -R 1000:1000 /angular-cli && \
+		mkdir /.npm && \
+		chown 1000:1000 /.npm
+USER 1000
+RUN cd /angular-cli && npm install @angular/cli@1.0.0
 ENV PATH /angular-cli/node_modules/.bin:$PATH
 
 CMD ['node']
