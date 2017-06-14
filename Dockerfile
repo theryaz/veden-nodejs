@@ -12,6 +12,4 @@ ENV PATH /node-v7.10.0-linux-x64/bin:$PATH
 
 VOLUME /app
 WORKDIR /app
-RUN mkdir /.npm && chown 1000:1000 /.npm
-USER 1000
 CMD ['node']
