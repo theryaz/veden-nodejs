@@ -2,6 +2,7 @@ FROM node:8.4.0-alpine
 
 VOLUME /app
 WORKDIR /app
-RUN npm install -f vue-cli
+RUN npm install -g vue-cli
 
-ENTRYPOINT ['vue']
+#ENTRYPOINT ["/usr/local/bin/vue"]
+ENTRYPOINT ["vue"]
