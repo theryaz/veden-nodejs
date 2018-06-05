@@ -1,4 +1,4 @@
-FROM node:8.9.0-alpine
+FROM node:8.11.2-alpine
 
 VOLUME /app
 WORKDIR /app
